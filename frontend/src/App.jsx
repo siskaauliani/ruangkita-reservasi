@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import Reservasi from './pages/Reservasi'
+import Tentang from './pages/Tentang'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      {/* Navbar */}
+      <nav style={styles.nav}>
+        <h2 style={styles.logo}>RuangKita</h2>
+        <ul style={styles.menu}>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/reservasi">Reservasi</Link></li>
+          <li><Link to="/tentang">Tentang</Link></li>
+        </ul>
+      </nav>
+
+      {/* Routing */}
+      <div style={styles.content}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reservasi" element={<Reservasi />} />
+          <Route path="/tentang" element={<Tentang />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
+}
+
+const styles = {
+  nav: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '15px 30px',
+    background: '#2563eb',
+    color: 'white',
+  },
+  logo: {
+    margin: 0,
+  },
+  menu: {
+    display: 'flex',
+    gap: '20px',
+    listStyle: 'none',
+  },
+  content: {
+    padding: '20px',
+  },
 }
 
 export default App
