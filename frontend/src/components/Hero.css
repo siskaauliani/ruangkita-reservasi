@@ -1,0 +1,48 @@
+/* Hero.css */
+.hero {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(to right, #ddd, #f5f5f5);
+}
+.app.dark .hero {
+  background: linear-gradient(to right, #333, #1e1e1e);
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero h1 span {
+  color: #007bff;
+}
+.hero p {
+  margin: 15px 0;
+  color: #555;
+}
+.app.dark .hero p {
+  color: #ccc;
+}
+.hero-buttons {
+  margin-top: 20px;
+}
+.btn {
+  padding: 12px 24px;
+  margin: 0 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn.primary {
+  background: #007bff;
+  color: white;
+}
+.btn.primary:hover {
+  background: #0056b3;
+}
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #555;
+}
+.app.dark .btn.secondary {
+  border: 2px solid #ccc;
+  color: #ccc;
+}

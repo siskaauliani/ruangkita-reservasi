@@ -1,0 +1,10 @@
+/* Footer.css */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+  margin-top: 40px;
+}
+.app.dark .footer {
+  background: #1e1e1e;
+}

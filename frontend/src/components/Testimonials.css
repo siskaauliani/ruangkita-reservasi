@@ -1,0 +1,26 @@
+/* Testimonials.css */
+.testimonials {
+  padding: 60px 0;
+  background: #eee;
+}
+.app.dark .testimonials {
+  background: #2e2e2e;
+}
+.testi-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.testi-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.app.dark .testi-card {
+  background: #3a3a3a;
+}
+.testi-card h4 {
+  margin-top: 10px;
+  color: #007bff;
+}
